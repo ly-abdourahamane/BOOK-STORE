@@ -1,0 +1,18 @@
+
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input  name="title" matInput placeholder="Title" [(ngModel)]="book.title">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input name="description" matInput placeholder="description" [(ngModel)]="book.description">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input name="author" matInput placeholder="Author" [(ngModel)]="book.author">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="saveBook()">Save</button>
+
+</form>
+  

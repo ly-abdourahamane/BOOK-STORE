@@ -1,0 +1,44 @@
+.separation-toolbar {
+    flex: 0 0 2%;
+  }
+  
+  #mat-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.5s;
+  
+    box-shadow: 0 1px 1px -1px rgba(0,0,0,.1), 0 2px 10px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 1px 1px -1px rgba(0,0,0,.1), 0 2px 10px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    z-index: 1;
+  }
+  
+  .container {
+    padding-right:15%;
+    padding-left:15%;
+  }
+  .separation-fin{
+    flex: 1 1 auto;
+  }
+  
+  .separation-job-resaux{
+    flex: 0 0 4%;
+  }
+  
+  .toolbarMenu{
+    background: white;
+    color:black
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #eee;
+  }
+  
+ 
+  
+  
