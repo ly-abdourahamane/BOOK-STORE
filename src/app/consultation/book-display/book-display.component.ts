@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { BookService } from '../../shared/book.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../../shared/book';
 
 @Component({
@@ -10,11 +9,19 @@ import { Book } from '../../shared/book';
 export class BookDisplayComponent implements OnInit {
 
   @Input()
-  book: Book;
+  private book: Book;
+
+  @Output()
+  private delete: EventEmitter<Book> = new EventEmitter<Book>();
+
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onDelete() {
+    this.delete.emit(this.book);
   }
 
 }

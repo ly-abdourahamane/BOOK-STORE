@@ -1,7 +1,10 @@
-<ul id="myUL" style="align: center;">
-    <li><a href="#">
+<ul id="myUL">
+    <li>
         author: {{book.author}}
         <span appUppercase> {{book.title}}</span> 
        description: {{book.description}}
-    </a></li>
+       <i (click)="onDelete()" class="material-icons">delete</i>
+   </li>
 </ul>
+
+

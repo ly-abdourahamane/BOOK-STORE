@@ -23,6 +23,13 @@ export class BookService {
 
     headers.append('Content-Type', 'application/json');
     return this._http.post<Book>('api/books', book, {headers: headers});
+  }
 
+  deleteBook(id: number): Observable<Book> {
+    const headers = new HttpHeaders();
+
+    headers.append('Content-Type', 'application/json');
+
+    return this._http.delete<Book>('api/books/' + id, {headers: headers});
   }
 }

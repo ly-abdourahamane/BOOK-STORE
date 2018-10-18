@@ -15,7 +15,7 @@
     margin: 0;
   }
   
-  #myUL li a {
+  #myUL li {
     border: 1px solid #ddd;
     margin-top: -1px; /* Prevent double borders */
     background-color: #f6f6f6;
@@ -26,7 +26,7 @@
     display: block
   }
   
-  #myUL li a:hover {
+  #myUL li:hover {
     background-color: #eee;
   }
 
