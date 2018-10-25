@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BookService } from './book.service';
 import { UppercaseDirective } from './uppercase.directive';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [UppercaseDirective],
+  declarations: [UppercaseDirective, HomeComponent],
   exports: [UppercaseDirective],
   providers: [BookService]
 })

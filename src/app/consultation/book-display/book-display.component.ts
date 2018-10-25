@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../../shared/book';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { BookService } from '../../shared/book.service';
+
 
 @Component({
   selector: 'app-book-display',
@@ -15,9 +18,10 @@ export class BookDisplayComponent implements OnInit {
   private delete: EventEmitter<Book> = new EventEmitter<Book>();
 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private bookService: BookService) { }
 
   ngOnInit() {
+    
   }
 
   onDelete() {

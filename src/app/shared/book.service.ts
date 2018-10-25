@@ -32,4 +32,8 @@ export class BookService {
 
     return this._http.delete<Book>('api/books/' + id, {headers: headers});
   }
+
+  getBookById(id: number): Observable<Book> {
+    return this._http.get<Book>('api/books/' + id);
+  }
 }

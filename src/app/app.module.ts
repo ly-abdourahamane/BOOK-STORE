@@ -4,24 +4,32 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ConsultationModule } from './consultation/consultation.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+import { AdminComponent } from './admin/admin.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ConsultationModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,    
+    HttpClientModule, 
+    
+    AppRoutingModule,
+    SharedModule,
 
     //MATERIAL
     MatToolbarModule

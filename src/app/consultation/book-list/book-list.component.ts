@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../../shared/book.service';
 import { Book } from '../../shared/book';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
@@ -13,7 +14,7 @@ export class BookListComponent implements OnInit {
   private bookSelected: Book;
   private book: Book;
   
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.book = {title: "", description: "", author: ""};
@@ -23,11 +24,12 @@ export class BookListComponent implements OnInit {
       
       console.log(books);
     }, error => console.log(error))
+
+    
   }
 
   onDelete(event: Book): void {
     this.bookService.deleteBook(event.id)
-    // .retry(3)
     .subscribe((book: Book) => {
     }, error => console.log(error));
 

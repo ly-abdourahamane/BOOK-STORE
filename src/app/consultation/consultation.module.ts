@@ -5,11 +5,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
-import { SharedModule } from '../shared/shared.module';
+
 import { BookComponent } from './book/book.component';
 import { BookDisplayComponent } from './book-display/book-display.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { ConsultationRoutingModule } from './consultation-routing.module';
 
 @NgModule({
   imports: [
@@ -18,15 +20,15 @@ import { BookListComponent } from './book-list/book-list.component';
     ReactiveFormsModule,
 
     //internal module
-    SharedModule,
+    ConsultationRoutingModule,
 
     //material
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   declarations: [BookComponent, BookDisplayComponent, BookListComponent],
-  exports: [BookComponent, BookDisplayComponent, BookListComponent],
   providers: []
 })
 export class ConsultationModule { }

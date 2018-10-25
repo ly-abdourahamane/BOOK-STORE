@@ -1,8 +1,9 @@
 <ul id="myUL">
     <li>
-        author: {{book.author}}
+       <a routerLink={{book.id}}> author: {{book.author}}
         <span appUppercase> {{book.title}}</span> 
        description: {{book.description}}
+    </a>
        <i (click)="onDelete()" class="material-icons">delete</i>
    </li>
 </ul>
