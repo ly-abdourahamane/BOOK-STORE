@@ -23,14 +23,14 @@ export class BookComponent {
   constructor(private route: ActivatedRoute, private bookService: BookService, private location: Location) { }
 
   ngOnInit() {
-    console.log("Book Component", this.book);
-
     this.route.paramMap.pipe(
       
-      switchMap((params: ParamMap) => this.bookService.getBookById(parseInt(params.get('id'), 10))))
-      .subscribe((book: Book) => {
-        this.book = book; console.log(this.book)
-      });
+      switchMap((params: ParamMap) => 
+        this.bookService.getBookById(parseInt(params.get('id'), 10))
+     )).subscribe((book: Book) => {
+
+        this.book = book; 
+      }, error => console.log(error));
   }
 
   onDelete() {

@@ -11,8 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { AdminComponent } from './admin/admin.component';
-
-
+import { BookNewComponent } from './admin/book-new/book-new.component';
+import { AuthorNewComponent } from './admin/author-new/author-new.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -20,6 +24,8 @@ import { AdminComponent } from './admin/admin.component';
     AppComponent,
     ToolbarComponent,
     AdminComponent,
+    BookNewComponent,
+    AuthorNewComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,11 @@ import { AdminComponent } from './admin/admin.component';
     SharedModule,
 
     //MATERIAL
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

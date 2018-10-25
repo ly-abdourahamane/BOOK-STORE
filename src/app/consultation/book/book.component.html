@@ -4,14 +4,14 @@
       <mat-card-title>Auteur:{{book.author}}</mat-card-title>
       <mat-card-subtitle>Titre: {{book.title}}</mat-card-subtitle>
     </mat-card-header>
-    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
        {{book.description}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="goBack()">Retour</button>
+      <button mat-button (click)="goBack()" >Go back</button>
     </mat-card-actions>
   </mat-card>
   
