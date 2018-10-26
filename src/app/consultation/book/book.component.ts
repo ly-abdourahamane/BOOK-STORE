@@ -40,4 +40,8 @@ export class BookComponent {
   goBack(): void {
     this.location.back();
   }
+
+  editBook(): void {
+    console.log(this.book);
+  }
 }

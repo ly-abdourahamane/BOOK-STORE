@@ -1,4 +1,4 @@
-<div [@book-items]="books?.length">
+<div>
 <div *ngFor="let book of books">
   <app-book-display [book]="book"  (delete)="onDelete($event)"></app-book-display> 
 </div>

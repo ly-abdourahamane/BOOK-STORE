@@ -10,8 +10,8 @@ const ROUTES: Routes = [
     {path: 'home', component: HomeComponent},
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'admin', component: AdminComponent},
-    {path: 'admin/new-book', component: BookNewComponent},
-    {path: 'admin/new-author', component: AuthorNewComponent},
+    {path: 'admin/edit-book', component: BookNewComponent},
+    {path: 'admin/edit-author', component: AuthorNewComponent},
     {path: 'books', loadChildren : './consultation/consultation.module#ConsultationModule'}
 ]
 

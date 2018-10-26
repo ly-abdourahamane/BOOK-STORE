@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {MatSelectModule} from '@angular/material/select';
     AdminComponent,
     BookNewComponent,
     AuthorNewComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
